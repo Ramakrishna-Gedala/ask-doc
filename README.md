@@ -1,4 +1,4 @@
-# 🎯 Ask-Doc: Multi-Tenant AI Document Q&A System
+# Ask-Doc: Multi-Tenant AI Document Q&A System
 
 A production-ready SaaS application for uploading documents (PDF, CSV, DOCX) and asking AI-powered questions using **Retrieval-Augmented Generation (RAG)** with **Amazon Bedrock**.
 
@@ -6,7 +6,7 @@ Perfect for understanding **RAG architectures**, **multi-tenancy patterns**, and
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Project Overview](#project-overview)
 - [Architecture](#architecture)
@@ -20,7 +20,7 @@ Perfect for understanding **RAG architectures**, **multi-tenancy patterns**, and
 
 ---
 
-## 🎨 Project Overview
+## Project Overview
 
 **Ask-Doc** is a multi-tenant application where users can:
 
@@ -39,7 +39,7 @@ Perfect for understanding **RAG architectures**, **multi-tenancy patterns**, and
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ### High-Level Flow
 
@@ -108,7 +108,7 @@ User Query → Embed Query → Semantic Search → Retrieve Chunks → LLM Answe
 
 ---
 
-## 💻 Tech Stack
+## Tech Stack
 
 ### Backend
 - **Framework**: FastAPI (Python web framework, similar to Express.js but Python)
@@ -139,7 +139,7 @@ User Query → Embed Query → Semantic Search → Retrieve Chunks → LLM Answe
 
 ---
 
-## 🚀 Setup Guide
+## Setup Guide
 
 ### Prerequisites
 
@@ -230,7 +230,7 @@ npm start
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ask-doc/
@@ -295,7 +295,7 @@ ask-doc/
 
 ---
 
-## 🔄 How It Works
+## How It Works
 
 ### 1. Authentication Flow
 
@@ -371,7 +371,7 @@ User Question: "What are the main topics?"
 
 ---
 
-## 📡 API Documentation
+## API Documentation
 
 ### Authentication Endpoints
 
@@ -521,7 +521,7 @@ Get chat history for a document.
 
 ---
 
-## 🔌 Alternative Tools & Architectures
+## Alternative Tools & Architectures
 
 ### Vector Database Alternatives
 
@@ -574,7 +574,7 @@ Get chat history for a document.
 
 ---
 
-## 💡 Interview Talking Points
+## Interview Talking Points
 
 ### 1. Multi-Tenancy
 
@@ -629,7 +629,7 @@ Get chat history for a document.
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ### Backend Tests
 ```bash
@@ -654,7 +654,7 @@ npm test -- --coverage --prefix frontend
 
 ---
 
-## 📚 Database Schema
+## Database Schema
 
 ### Users Table
 ```sql
@@ -701,7 +701,7 @@ CREATE INDEX ON chunks USING ivfflat (embedding vector_cosine_ops);
 
 ---
 
-## 🔒 Security Considerations
+## Security Considerations
 
 - ✅ **JWT Tokens**: Signed, can't be tampered with
 - ✅ **Password Hashing**: bcrypt with salt
@@ -714,7 +714,7 @@ CREATE INDEX ON chunks USING ivfflat (embedding vector_cosine_ops);
 
 ---
 
-## 📖 Documentation
+## Documentation
 
 ### Database Migrations
 ```bash
@@ -741,7 +741,7 @@ docker-compose logs -f backend
 
 ---
 
-## 🎓 Learning Resources
+## Learning Resources
 
 - **FastAPI Docs**: https://fastapi.tiangolo.com
 - **SQLAlchemy Docs**: https://docs.sqlalchemy.org
@@ -752,7 +752,7 @@ docker-compose logs -f backend
 
 ---
 
-## 📞 Support
+## Support
 
 For issues, questions, or improvements:
 1. Check existing issues
@@ -761,13 +761,13 @@ For issues, questions, or improvements:
 
 ---
 
-## 📄 License
+## License
 
 This project is open source and available under the MIT License.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - FastAPI for the amazing Python web framework
 - AWS Bedrock for LLM & embedding models
@@ -776,6 +776,6 @@ This project is open source and available under the MIT License.
 
 ---
 
-**Happy Coding! 🚀**
+**Happy Coding! **
 
 This is a learning project designed for understanding modern AI/LLM architectures. Use it as reference for building similar systems!
