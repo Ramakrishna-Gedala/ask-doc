@@ -1,19 +1,24 @@
 # Authentication routes
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status, Header
 from sqlalchemy.orm import Session
 from app.db.database import get_db
 from app.models.schemas import SignupRequest, LoginRequest, TokenResponse, UserResponse
 from app.services.auth_service import AuthService
 from app.core.security import verify_token, TokenData
-from fastapi.security import HTTPBearer, HTTPAuthCredentials
+from typing import Optional
 
 router = APIRouter(prefix="/auth", tags=["Authentication"])
-security = HTTPBearer()
 
 
-def get_current_user(credentials: HTTPAuthCredentials = Depends(security)) -> TokenData:
+def get_current_user(authorization: Optional[str] = Header(None)) -> TokenData:
     """Dependency to get current user from JWT token"""
-    token = credentials.credentials
+    if not authorization or not authorization.startswith("Bearer "):
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Missing or invalid authorization header",
+        )
+
+    token = authorization.replace("Bearer ", "")
     user_data = verify_token(token)
 
     if not user_data:

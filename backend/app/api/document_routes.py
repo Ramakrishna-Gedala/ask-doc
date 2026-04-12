@@ -49,7 +49,7 @@ async def upload_document(
         file_size = len(file_content)
 
         # Validate file
-        file_type = ValidationService.validate_file_type(file.filename, settings.ALLOWED_FILE_TYPES)
+        file_type = ValidationService.validate_file_type(file.filename, settings.allowed_file_types_list)
         ValidationService.validate_file_size(file_size, settings.MAX_FILE_SIZE)
 
         # Process file and extract text

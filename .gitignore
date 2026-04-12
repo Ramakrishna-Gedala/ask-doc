@@ -1,0 +1,97 @@
+# Environment Variables - NEVER COMMIT THESE
+.env
+.env.local
+.env.*.local
+backend/.env
+backend/.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Node/Frontend
+node_modules/
+npm-debug.log
+yarn-error.log
+frontend/build/
+frontend/dist/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+logs/
+*.log
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+
+# AWS Credentials (CRITICAL - NEVER COMMIT)
+aws_credentials
+.aws/
+*.pem
+*.key
+
+# Secrets
+*.secret
+secrets.json
+credentials.json
+
+# Local development overrides
+local_settings.py
+settings.local.py
+
+# Optional: Uncomment to exclude backend .env.example if you prefer
+# backend/.env.example

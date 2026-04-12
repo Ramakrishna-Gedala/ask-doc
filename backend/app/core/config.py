@@ -35,7 +35,12 @@ class Settings(BaseSettings):
     # File Upload
     MAX_FILE_SIZE: int = 10 * 1024 * 1024  # 10MB
     MAX_FILES_PER_USER: int = 20
-    ALLOWED_FILE_TYPES: list = ["pdf", "csv", "docx"]
+    ALLOWED_FILE_TYPES: str = "pdf,csv,docx"
+
+    @property
+    def allowed_file_types_list(self) -> list:
+        """Parse comma-separated file types to list"""
+        return [ft.strip() for ft in self.ALLOWED_FILE_TYPES.split(",")]
 
     # RAG
     CHUNK_SIZE: int = 500
@@ -43,10 +48,12 @@ class Settings(BaseSettings):
     TOP_K_CHUNKS: int = 5
 
     # CORS
-    CORS_ORIGINS: list = [
-        "http://localhost:3000",
-        "http://localhost:8000",
-    ]
+    CORS_ORIGINS: str = "http://localhost:3000,http://localhost:8000"
+
+    @property
+    def cors_origins_list(self) -> list:
+        """Parse comma-separated CORS origins to list"""
+        return [origin.strip() for origin in self.CORS_ORIGINS.split(",")]
 
     class Config:
         env_file = ".env"

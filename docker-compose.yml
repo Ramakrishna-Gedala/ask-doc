@@ -1,6 +1,4 @@
 # Docker Compose for development and production deployment
-version: '3.8'
-
 services:
   # PostgreSQL Database with pgvector support
   postgres:
