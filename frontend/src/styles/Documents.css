@@ -1,0 +1,39 @@
+/* Documents page styling */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-title {
+  color: #333;
+  margin: 0 0 2rem 0;
+}
+
+.documents-section {
+  display: grid;
+  gap: 2rem;
+}
+
+.error-message {
+  background: #fee;
+  border: 1px solid #fcc;
+  color: #c33;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.loading-state {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 8px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    padding: 1rem;
+  }
+}

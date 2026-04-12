@@ -1,0 +1,126 @@
+/* Document list styling */
+.document-list {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.document-list h2 {
+  margin: 0 0 1.5rem 0;
+  color: #333;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.documents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.document-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s;
+  background: white;
+}
+
+.document-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.doc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.doc-info {
+  flex: 1;
+}
+
+.doc-name {
+  margin: 0;
+  color: #333;
+  word-break: break-word;
+  font-size: 1.1rem;
+}
+
+.doc-type {
+  display: inline-block;
+  background: #667eea;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.doc-size {
+  font-size: 0.9rem;
+  color: #999;
+  white-space: nowrap;
+  margin-left: 1rem;
+}
+
+.doc-date {
+  font-size: 0.9rem;
+  color: #999;
+  margin: 0 0 1.5rem 0;
+}
+
+.doc-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-ask,
+.btn-delete {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  transition: all 0.3s;
+}
+
+.btn-ask {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-ask:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(102, 126, 234, 0.4);
+}
+
+.btn-delete {
+  background: #fee;
+  color: #c33;
+  border: 1px solid #fcc;
+}
+
+.btn-delete:hover:not(:disabled) {
+  background: #fdd;
+}
+
+.btn-delete:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
