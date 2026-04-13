@@ -88,3 +88,22 @@ class ValidationService:
         text = ValidationService.SSN_PATTERN.sub("[SSN]", text)
 
         return text
+
+    @staticmethod
+    def estimate_tokens(text: str) -> int:
+        """
+        Rough token estimation (average 4 chars per token).
+        For production, use proper tokenizer like tiktoken.
+
+        Args:
+            text: Text to estimate tokens for
+
+        Returns:
+            Approximate token count
+        """
+        if not text:
+            return 0
+        # Conservative estimate: ~4 characters per token
+        # Normalize whitespace first
+        text = " ".join(text.split())
+        return max(1, len(text) // 4)

@@ -53,10 +53,8 @@ class RAGService:
         similar_chunks = db.query(Chunk).filter(
             Chunk.document_id == document_id
         ).order_by(
-            # pgvector similarity operator <=> (cosine similarity)
-            func.cast(Chunk.embedding, type_=object).astext.op("<->")(
-                func.cast(query_embedding, type_=object).astext
-            )
+            # pgvector cosine distance operator <-> (lower distance = more similar)
+            Chunk.embedding.op("<->")(query_embedding)
         ).limit(top_k).all()
 
         if not similar_chunks:
