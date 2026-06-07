@@ -1,8 +1,10 @@
-# Ask-Doc: Multi-Tenant AI Document Q&A System
+# Ask-Doc: Multi-Tenant AI Document Q&A System (RAG + Bedrock + pgvector) | AI Document Chat
 
-A production-ready SaaS application for uploading documents (PDF, CSV, DOCX) and asking AI-powered questions using **Retrieval-Augmented Generation (RAG)** with **Amazon Bedrock**.
+## Build a production-ready RAG pipeline for document question answering with vector search
 
-Perfect for understanding **RAG architectures**, **multi-tenancy patterns**, and **modern AI/LLM integrations** in interviews.
+A **multi-tenant AI document Q&A platform** that lets users upload documents (PDF, CSV, DOCX) and ask natural language questions — powered by **Retrieval-Augmented Generation (RAG)**, **Amazon Bedrock (Claude)**, **pgvector semantic search**, and **LangChain**. Built for engineers learning **RAG architecture, vector embeddings, and AI-powered document intelligence**.
+
+![AI Document Q&A System — RAG Pipeline with FastAPI, Bedrock, pgvector, and LangChain](docs/assets/rag-document-qa-fastapi-bedrock-pgvector-langchain.png)
 
 ---
 
@@ -776,6 +778,6 @@ This project is open source and available under the MIT License.
 
 ---
 
-**Happy Coding! **
+**Happy Coding!**
 
 This is a learning project designed for understanding modern AI/LLM architectures. Use it as reference for building similar systems!
